@@ -1,4 +1,4 @@
-package demo.jacoco.controller;
+package demo.jacoco.api;
 
 import org.springframework.stereotype.Service;
 

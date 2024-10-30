@@ -35,4 +35,17 @@ class TestControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Test"));
     }
+
+    @DisplayName("테스트 컨트롤러에서 Example 문자열을 반환한다.")
+    @Test
+    void example() throws Exception {
+        // Given
+        given(testService.getExample())
+                .willReturn("Example");
+
+        // When & Then
+        mockMvc.perform(get("/example"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Example"));
+    }
 }
